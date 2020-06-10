@@ -33,10 +33,13 @@ body{
   background: #111;   
 }
 .container_inner{
-  position: relative;
-  width: 1360px;
-  margin: 0 auto;
-  background: #000;  
+    position: relative;
+    width: 1360px;
+    height: 2000px;
+    margin: 50px auto 50px;
+    padding: 0 50px;
+    background: #000;
+    border: 1px solid #fff;
 }
 .sidebar_area{
   position: absolute;
@@ -44,19 +47,64 @@ body{
   border: 1px solid #ccc;
   width:260px;
 }
+.sidebar_area ul li{
+  margin: 15px auto;
+  text-align: center;  
+}
+.sidebar_area ul li div{
+  color:#fff;
+}
 .main_content_area{
   position: absolute;
-  right:0;
-  border:1px solid #ccc;
-  width: 1100px;
+  right: 50px;
+  border: 1px solid #ccc;
+  width: 1000px;
 }
 #mv{
-
+    position: relative;
+    height: 740px;
 }
-#mv .bg img{
-  
+#mv .mv_bg01 img{
+    position: absolute;
+    left: 0;  
 }
-
+#mv .mv_bg02 img{
+    position: absolute;
+    right: 0;
+    bottom:116px;
+    z-index: 1;
+}
+#mv .mv_bg03 img{
+    position: absolute;
+    right: 0;  
+}
+#banner_area{
+  margin-top:75px;
+  height:625px;
+  border: 1px solid #fff;
+}
+.banner_area_inner:nth-child(1){
+    border: 1px solid #fff;
+    width: calc( 50% - 9px );
+    margin-right: 12px;
+    height: 100%;
+    display: inline-block;
+}
+.banner_area_inner:nth-child(2){
+    border: 1px solid #fff;
+    width: calc( 50% - 9px );
+    height: 100%;
+    display: inline-block; 
+}
+.banner_area_inner div:nth-child(1){
+    border: 1px solid #fff;
+    height: calc(50% - 7px);
+    margin-bottom: 15px;
+}
+.banner_area_inner div:nth-child(2){
+    border: 1px solid #fff;
+    height: calc(50% - 7px);
+}
 @media screen and (max-width:798px){
   .main_content_area{
 
