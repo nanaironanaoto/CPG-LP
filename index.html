@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,6 +10,7 @@
 	<link rel="stylesheet" href="https://use.typekit.net/rpd7crq.css">
 	<link rel="stylesheet" href="./css/destyle.css">
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/flickity.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
@@ -128,15 +128,21 @@
 					</div>
 				</div>
 				<!-- YOUTUBE -->
-				<div id="youtube_area" class="pc">
+				<div id="youtube_area" class="pc notab protab">
 					<div class="YT">
 						<iframe width="800" height="498" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 					<div class="YTbg"></div>
 				</div>
+				<div id="youtube_area" class="tab noprotab">
+					<div class="YT">
+						<iframe width="700" height="317" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="YTbg"></div>
+				</div>				
 				<div id="youtube_area" class="sp">
 					<div class="YT">
-						<iframe width="330" height="200" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="330" height="186" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>					
 					<div class="YTbg"></div>
 				</div>				
@@ -144,24 +150,35 @@
 				<div id="about_area">
 					<h2>ABOUT</h2>
 					<div class="about_bg">
-						<img src="./img/about_bg.jpg" alt="">
+						<img src="./img/about_bg.jpg" alt="" class="pc">
+						<img src="./img/sp/about_bg.jpg" alt="" class="sp">
 					</div>
 					<div>
+						<div class="about_img sp notab">
+							<div class="about_img01">
+								<img src="./img/sp/about_img01.png" alt="">
+							</div>
+							<div class="about_img02">
+								<img src="./img/sp/about_img02.png" alt="">
+							</div>
+						</div>						
 						<div class="about_txt">
 							<h3>想像を超えろ、本物を作り出せ</h3>
-							<p>「CERAMIC POWER GEAR」はコンプレッションギア部門、<br>
-							スポーツネックレス部門、 コンフォートアパレル部門から成り、<br>
+							<p>「CERAMIC POWER GEAR」はコンプレッションギア部門、
+							スポーツネックレス部門、 コンフォートアパレル部門から成り、
 							各部門の開発にはそれぞれのスペシャリストが集結。<br>
-							叡智を集め、最上の素材と匠の業によって形作られる<br>
+							叡智を集め、最上の素材と匠の業によって形作られる
 							至極のアイテムを開発しています。</p>
 							<div class="view_more_btn">VIEW MORE ></div>					
 						</div>
 						<div class="about_img">
-							<div class="about_img01">
-								<img src="./img/about_img01.png" alt="">
-							</div>
-							<div class="about_img02">
-								<img src="./img/about_img02.png" alt="">
+							<div class="pc tab">
+								<div class="about_img01">
+									<img src="./img/about_img01.png" alt="">
+								</div>
+								<div class="about_img02">
+									<img src="./img/about_img02.png" alt="">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -171,21 +188,34 @@
 					<div>
 						<h2>PRODUCT</h2>
 					</div>
-					<div class="product_items">
-						<div>
-							<img src="./img/product_01.png" alt="">
-						</div>
-						<div>
-							<img src="./img/product_02.png" alt="">
-						</div>
-						<div>
-							<img src="./img/product_03.png" alt="">
+					<div class="pc tab">
+						<div class="product_items">
+							<div>
+								<img src="./img/product_01.png" alt="">
+							</div>
+							<div>
+								<img src="./img/product_02.png" alt="">
+							</div>
+							<div>
+								<img src="./img/product_03.png" alt="">
+							</div>
 						</div>
 					</div>
+					<div class="sp notab">
+						<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+							<div class="gallery-cell"><img src="./img/sp/product_01.png" alt=""></div>
+							<div class="gallery-cell"><img src="./img/sp/product_01.png" alt=""></div>
+							<div class="gallery-cell"><img src="./img/sp/product_01.png" alt=""></div>
+							<div class="gallery-cell"><img src="./img/sp/product_01.png" alt=""></div>
+							<div class="gallery-cell"><img src="./img/sp/product_01.png" alt=""></div>
+						</div>
+					</div>		
 					<div class="product_bg">
 					</div>					
 					<div>
-						<div class="view_more_btn" style="margin: 83px auto;">VIEW MORE ></div>
+						<div class="product_btn_area">
+							<div class="view_more_btn">VIEW MORE ></div>
+						</div>
 					</div>
 				</div>
 				<!-- ACCESS -->
@@ -212,22 +242,24 @@
 				<!-- フッター -->
 				<div id="footer">
 					<div class="ft_col">
-						<ul>
-							<li>
-								<img src="./img/ft_logo.png" alt="" style="margin-top: -19px;">
-							</li>
-							<li>
-								<img src="./img/ft_tel.png" alt="">
-							</li>
-							<li class="ft_sns">
-								<div>
-									<img src="./img/ft_twitter.png" alt="">
-								</div>
-								<div>
-									<img src="./img/ft_instagram.png" alt="">
-								</div>
-							</li>
-						</ul>						
+						<div class="pc notab">
+							<ul>
+								<li>
+									<img src="./img/ft_logo.png" alt="" style="margin-top: -19px;">
+								</li>
+								<li>
+									<img src="./img/ft_tel.png" alt="">
+								</li>
+								<li class="ft_sns">
+									<div>
+										<img src="./img/ft_twitter.png" alt="">
+									</div>
+									<div>
+										<img src="./img/ft_instagram.png" alt="">
+									</div>
+								</li>
+							</ul>						
+						</div>
 					</div>
 					<div class="ft_col">
 						<ul>
@@ -243,147 +275,35 @@
 							<li>ONLINE STORE</li>
 							<li>CONTACT</li>
 						</ul>
-					</div>					
+					</div>
+					<div class="sp tab">
+						<ul>
+							<li>
+								<img src="./img/ft_tel.png" alt="">
+							</li>
+							<li class="ft_sns">
+								<div>
+									<img src="./img/ft_twitter.png" alt="">
+								</div>
+								<div>
+									<img src="./img/ft_instagram.png" alt="">
+								</div>
+							</li>
+							<li class="ft_logo">
+								<img src="./img/ft_logo.png" alt=""">
+							</li>							
+						</ul>						
+					</div>										
 				</div>
 			</div>
 		</div>
 	</div>
 
 <!--bxslider START-->
-<script type="text/javascript" src="{{ app.config.front_urlpath }}/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="./js/jquery.bxslider.js"></script>
 <!--bxslider END-->
-<script type="text/javascript" src="{{ app.config.front_urlpath }}/js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="./js/jquery.inview.min.js"></script>
+<script type="text/javascript" src="./js/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="./js/script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Document</title>
-	<link rel="stylesheet" href="https://use.typekit.net/jsd1nvl.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-	<link rel="stylesheet" href="https://use.typekit.net/dnf0qsh.css">	
-	<link rel="stylesheet" href="https://use.typekit.net/rpd7crq.css">
-	<link rel="stylesheet" href="./css/destyle.css">
-	<link rel="stylesheet" href="./css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-</head>
-<body>
-	<div class="container">
-
-		<!-- ローディングアニメーション -->
-		<div id="loader-bg" class="row">
-			<div id="loader">
-				<img src="./img/logo_white.svg" alt="Now Loading..." />
-			</div>
-		</div>
-
-		<div class="row container_inner">
-			<!-- 追従サイドバー -->
-			<div class="sidebar_area">
-				<div>
-					<ul>
-						<li>
-							<div>
-								logo
-							</div>
-						</li>
-						<li>
-							<div>
-								ABOUT
-							</div>
-						</li>
-						<li>
-							<div>
-								PRODUCT
-							</div>
-						</li>
-						<li>
-							<div>
-								NEWS
-							</div>
-						</li>
-						<li>
-							<div>
-								ACCESS
-							</div>
-						</li>
-						<li>
-							<div>
-								RAKUTEN STORE
-							</div>
-						</li>
-						<li>
-							<div>
-								ONLINE STORE
-							</div>
-						</li>
-						<li>
-							<div>
-								CONTACT
-							</div>
-						</li>
-						<li>
-							<div>
-								03-6809-0553
-							</div>
-						</li>
-						<li>
-							<div>
-								SNS
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-			<!-- メインコンテンツ -->
-			<div class="main_content_area">
-				<!-- メインビジュアル -->
-				<div id="mv">
-					<div class="mv_bg01">
-						<img src="./img/mv_vertical_logo.png" alt="">
-					</div>
-					<div class="mv_bg02">
-						<img src="./img/mv_caption.png" alt="">
-					</div>
-					<div class="mv_bg03">
-						<img src="./img/mv_01.jpg" alt="">
-					</div>
-				</div>
-				<!-- BANNER -->
-				<div id="banner_area">
-					<div class="banner_area_inner">
-						
-					</div>
-					<div class="banner_area_inner">
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-				<!-- YOUTUBE -->
-				<div></div>
-				<!-- ABOUT -->
-				<div></div>
-				<!-- PRODUCT -->
-				<div></div>
-				<!-- ACCESS -->
-				<div></div>
-				<!-- フッター -->
-				<div></div>
-			</div>
-
-		</div>
-
-	</div>
-
-<!--bxslider START-->
-<script type="text/javascript" src="{{ app.config.front_urlpath }}/js/jquery.bxslider.js"></script>
-<!--bxslider END-->
-<script type="text/javascript" src="{{ app.config.front_urlpath }}/js/jquery.inview.min.js"></script>
-<script type="text/javascript" src="./js/script.js"></script>
-</body>
->>>>>>> 528389fa5fc21d8535c185789da7b46b549a8124
 </html>
