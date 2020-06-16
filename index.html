@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
 	<link rel="stylesheet" href="https://use.typekit.net/jsd1nvl.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -13,10 +13,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-	<div class="container">
+	<div class="wrapper">
 
 		<!-- ローディングアニメーション -->
-		<div id="loader-bg" class="row">
+		<div id="loader-bg">
 			<div id="loader">
 				<img src="./img/logo_white.svg" alt="Now Loading..." />
 			</div>
@@ -25,35 +25,227 @@
 		<div class="row container_inner">
 			<!-- 追従サイドバー -->
 			<div class="sidebar_area">
-				<div>
-					
+				<!--SP版の時にこのヘッダーを表示-->
+				<div class="sidebar_sp_visible_area">
+					<div>
+						<img src="./img/sp/hd_logo.png" alt="">
+					</div>
+					<div>
+						<img src="./img/sp/hd_tel.png" alt="">
+					</div>
+				</div>
+				<!---->
+				<div class="sidebar_sp_hidden_area">
+					<ul>
+						<li>
+							<div>
+								<img src="./img/side_logo.png" alt="">
+							</div>
+						</li>
+						<li>
+							<div>
+								ABOUT
+							</div>
+						</li>
+						<li>
+							<div>
+								PRODUCT
+							</div>
+						</li>
+						<li>
+							<div>
+								NEWS
+							</div>
+						</li>
+						<li>
+							<div>
+								ACCESS
+							</div>
+						</li>
+						<li>
+							<div>
+								RAKUTEN STORE
+							</div>
+						</li>
+						<li>
+							<div>
+								<span>ONLINE STORE</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								CONTACT
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="./img/ft_tel.png" alt="">
+							</div>
+						</li>
+						<li>
+							<div class="side_col">
+								<div>
+									<img src="./img/ft_twitter.png" alt="">
+								</div>
+								<div>
+									<img src="./img/ft_instagram.png" alt="">
+								</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
-
 			<!-- メインコンテンツ -->
 			<div class="main_content_area">
 				<!-- メインビジュアル -->
 				<div id="mv">
-					<div class="bg">
-						<img src="./img/mv_01.jpg" alt="">
+					<div class="mv_bg01">
+						<img src="./img/mv_vertical_logo.png" alt="" class="pc">
+						<img src="./img/sp/mv_vertical_logo.png" alt="" class="sp">
+					</div>
+					<div class="mv_bg02">
+						<img src="./img/mv_caption.png" alt="" class="pc">
+						<img src="./img/mv_caption.png" alt="" class="sp">
+					</div>
+					<div class="mv_bg03">
+						<img src="./img/mv_01.jpg" alt="" class="pc">
+						<img src="./img/sp/mv_01.jpg" alt="" class="sp">
 					</div>
 				</div>
 				<!-- BANNER -->
-				<div></div>
+				<div id="banner_area">
+					<div class="banner_area_inner">
+						<img src="./img/middle_01.jpg" alt="">
+					</div>
+					<div class="banner_area_inner">
+						<div>
+							<img src="./img/middle_02.jpg" alt="">
+						</div>
+						<div>
+							<img src="./img/middle_03.jpg" alt="">
+						</div>
+					</div>
+				</div>
 				<!-- YOUTUBE -->
-				<div></div>
+				<div id="youtube_area" class="pc">
+					<div class="YT">
+						<iframe width="800" height="498" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="YTbg"></div>
+				</div>
+				<div id="youtube_area" class="sp">
+					<div class="YT">
+						<iframe width="330" height="200" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>					
+					<div class="YTbg"></div>
+				</div>				
 				<!-- ABOUT -->
-				<div></div>
+				<div id="about_area">
+					<h2>ABOUT</h2>
+					<div class="about_bg">
+						<img src="./img/about_bg.jpg" alt="">
+					</div>
+					<div>
+						<div class="about_txt">
+							<h3>想像を超えろ、本物を作り出せ</h3>
+							<p>「CERAMIC POWER GEAR」はコンプレッションギア部門、<br>
+							スポーツネックレス部門、 コンフォートアパレル部門から成り、<br>
+							各部門の開発にはそれぞれのスペシャリストが集結。<br>
+							叡智を集め、最上の素材と匠の業によって形作られる<br>
+							至極のアイテムを開発しています。</p>
+							<div class="view_more_btn">VIEW MORE ></div>					
+						</div>
+						<div class="about_img">
+							<div class="about_img01">
+								<img src="./img/about_img01.png" alt="">
+							</div>
+							<div class="about_img02">
+								<img src="./img/about_img02.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- PRODUCT -->
-				<div></div>
+				<div id="product_area">
+					<div>
+						<h2>PRODUCT</h2>
+					</div>
+					<div class="product_items">
+						<div>
+							<img src="./img/product_01.png" alt="">
+						</div>
+						<div>
+							<img src="./img/product_02.png" alt="">
+						</div>
+						<div>
+							<img src="./img/product_03.png" alt="">
+						</div>
+					</div>
+					<div class="product_bg">
+					</div>					
+					<div>
+						<div class="view_more_btn" style="margin: 83px auto;">VIEW MORE ></div>
+					</div>
+				</div>
 				<!-- ACCESS -->
-				<div></div>
+				<div id="access_area">
+					<div>
+						<h2>ACEESS</h2>
+					</div>
+					<div>
+						<div class="shop_image">
+							<img src="./img/shop_image.jpg" alt="">
+						</div>
+						<div class="shop_txt">
+							<h3>Yokohama Shop</h3>
+							<hr>
+							<p>神奈川県横浜市中区住吉町1-12-5 1階<br>
+								1F 1-12-5 Sumiyoshicho, Naka-ku, Yokohama, Kanagawa<br>
+								<br>
+								Tel : 045-228-7898<br>
+								Open : 11:00　Close : 20:00
+							</p>
+						</div>
+					</div>
+				</div>
 				<!-- フッター -->
-				<div></div>
+				<div id="footer">
+					<div class="ft_col">
+						<ul>
+							<li>
+								<img src="./img/ft_logo.png" alt="" style="margin-top: -19px;">
+							</li>
+							<li>
+								<img src="./img/ft_tel.png" alt="">
+							</li>
+							<li class="ft_sns">
+								<div>
+									<img src="./img/ft_twitter.png" alt="">
+								</div>
+								<div>
+									<img src="./img/ft_instagram.png" alt="">
+								</div>
+							</li>
+						</ul>						
+					</div>
+					<div class="ft_col">
+						<ul>
+							<li>ABOUT</li>
+							<li>PRODUCTS</li>
+							<li>NEWS</li>
+							<li>ACCESS</li>
+						</ul>
+					</div>
+					<div class="ft_col">
+						<ul>
+							<li>RAKUTEN STORE</li>
+							<li>ONLINE STORE</li>
+							<li>CONTACT</li>
+						</ul>
+					</div>					
+				</div>
 			</div>
-
 		</div>
-
 	</div>
 
 <!--bxslider START-->
