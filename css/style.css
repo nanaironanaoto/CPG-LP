@@ -11,8 +11,8 @@
 #loader {
   display: block;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: calc( 50vh + 90px );
+  left: calc( 50vw - 196px );
   width: 200px;
   height: 200px;
   margin-top: -100px;
@@ -23,28 +23,124 @@
 }
 #loader img{
     width: 270%;
-    transform: translate(-30%, 83%);
 }
+
+.zoom_img{
+    transform-origin: center;
+    /*transform-origin: left bottom;*/
+    transition-duration: 0.5s;  
+}
+
+.hfadeIn .passing_box {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: right;
+    transform: scaleX(1);
+    transition: 0.5s;
+    z-index: 2;
+}
+.hfadeIn.active_hfadeIn .passing_box {
+    background: #000;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+/*inveiwの固有トリガー start*/
+.hfadeIn_sub01 {
+    clear: both;
+}
+.hfadeIn_sub01_trigger{
+  position: relative;
+  top:-250px;
+}
+.hfadeIn_sub01 .passing_box_sub01 {
+    width: 100%;
+    height: 100%;
+    /*position: absolute;*/
+    transform-origin: right;
+    opacity: 1;
+    transition: 1.5s;
+}
+.hfadeIn_sub01.active_hfadeIn_sub01 .passing_box_sub01 {
+    opacity: 0;
+    transition: 1.5s;
+}
+/*inveiwの固有トリガー end*/
+.vfadeIn .passing_box {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: 0.5s;
+}
+.vfadeIn.active_vfadeIn .passing_box {
+    background: #000;
+    transform: scaleY(0);
+    transition: 0.5s;
+}
+
+.fadeIn .passing_box {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    transition: 0.5s;
+}
+.fadeIn.active .passing_box {
+    background: #000;
+    transition: 0.5s;
+    opacity: 0;
+}
+
 body{
-  background: #000;
+  /*background: #000;*/
   font-family: eurostile, sans-serif;
   font-weight: 500;
   font-style: normal; 
   letter-spacing: 1.5px;
+  transition: 1s;
 }
 .wrapper{
-  background: #111;   
+}
+#wrapper-bg{
+ position: fixed;
+ right: 0;
+ bottom: 0;
+ min-width: 100%;
+ min-height: 100%;
+ width: auto;
+ height: auto;
+ z-index: -50;
+ background: linear-gradient(-45deg, rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.9));
+ background-size: cover;
+}
+#bg-video{
+ position: fixed;
+ right: 0;
+ bottom: 0;
+ min-width: 100%;
+ min-height: 100%;
+ width: auto;
+ height: auto;
+ z-index: -100;
+ background-size: cover;
+}
+.bx-pager.bx-default-pager {
+    display: none;
 }
 .container_inner{
     position: relative;
-    width: 1366px;
     margin: 0 auto 50px;
     padding: 0 50px;
-    background: #000;
+    /*background: #000;*/
 }
 .sidebar_area{
   position: fixed;
-  width:260px;
+  width:13vw;
   height: 100%;  
 }
 .sidebar_area ul li{
@@ -53,92 +149,160 @@ body{
 }
 .sidebar_area ul li div{
   color:#fff;
+  transition-duration: 0.5s;
 }
-.sidebar_area ul li:nth-child(7) div span{
+.sidebar_area ul li div span{
+  font-size: 16px;
+  transition-duration: 0.5s;
+}
+.online_store_btn_box span{
     color: #000;
     background: #fff;
     padding: 6px 8px;
     font-weight: 700;
 }
 .main_content_area{
+  overflow: hidden;
   position: absolute;
-  right: 0; 
-  width: 1000px;
+  right: 50px; 
+  width: 78vw;
 }
 .side_col div{
   display: inline-block;
   margin: 0 10px;  
 }
 #mv{
+    width: calc( 100% - 50px );
+    float: right;  
     position: relative;
     height: 740px;
 }
+#mv .mv_bg01{
+    width: 70px;/* トリミングしたい枠の幅 */
+    height: 0vh;/* トリミングしたい枠の高さ */
+    top:-15px;
+    position: absolute;    
+    opacity: 0;
+    transition:1s;
+    transition-duration: 1s;
+}
 #mv .mv_bg01 img{
     position: absolute;
-    left: 0;
+    left: -50px;
     z-index:1;  
+}
+#mv .mv_bg02{
+    overflow: hidden;
+    width: 627px;/* トリミングしたい枠の幅 */
+    height: 614px;/* トリミングしたい枠の高さ */
+    right: -500px;
+    opacity: 0;
+    position: absolute;    
+    transition-duration: 1.5s;
+}
+.mv_bg03{
+  opacity: 0;
+  transition:1.5s;
+  transition-duration:3s;
+    
 }
 #mv .mv_bg02 img{
     position: absolute;
     right: 0;
-    bottom:116px;
+    bottom:0;
     z-index: 1;
 }
 #mv .mv_bg03 img{
-    position: absolute;
-    right: 0;  
+    height: auto;
 }
-#banner_area{
-  margin-top:75px;
-  height:625px
+.zoom{
+    transform-origin: left bottom;
+    transform: scale(1.1);
+    transition:0;
+}
+.zoom.active-zoom{
+    transform: scale(1.0);
+    transition:4s; 
+}
+.bxslider li{
+  overflow: hidden;
+}
+.mv_bg03_para01{
+    top: 0px;
+    opacity: 1;
+}
+#banner_area {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .banner_area_inner:nth-child(1){
     width: calc( 50% - 9px );
-    margin-right: 12px;
+    margin-right: 10px;
     height: 100%;
     display: inline-block;
+    overflow: hidden;
+    transition:2s;
+    transition-duration: :2s;
+    opacity: 0;
 }
 .banner_area_inner:nth-child(2){
     width: calc( 50% - 9px );
     height: 100%;
     display: inline-block; 
+    transition:2s;
+    transition-duration: :3s;
+    opacity: 0;
 }
 .banner_area_inner div:nth-child(1){
     height: calc(50% - 7px);
     margin-bottom: 15px;
+    overflow: hidden;
+    transition:2s;
+    transition-duration: :4s;
+    opacity: 0;    
 }
 .banner_area_inner div:nth-child(2){
     height: calc(50% - 7px);
+    transition:2s;
+    transition-duration: :6s;
+    opacity: 0;    
+    overflow: hidden;
 }
 #youtube_area{
     position: relative;
     height:733px;
+    opacity: 1;
 }
 .YT{
-    margin: 127px 0 0 90px;
-    position: absolute;
     width: 100%;
-    z-index: 2;
+    margin: 128px auto;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+}
+.YTbg_wrapper{
+  text-align: center;
 }
 .YTbg{
+    margin: 0 auto;
     width: 800px;
     height: 498px;
-    position: absolute;
+    position: relative;
     top: 106px;
-    left: 70px;
-    border: 1px solid #ccc
+    left: -33px;
+    border: 1px solid #ccc;
 }
 #about_area{
   position: relative;
 }
 .about_bg img{
-  width: 100%;
+  width: 80%;
 }
 .about_txt{
     vertical-align: top;
     color: #fff;
     display: inline-block;
-    width: 49.4%;
+    width: 53.4%;
 }
 .about_txt h3{
     font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;  
@@ -155,12 +319,13 @@ body{
 .about_img{
     position: relative;
     display: inline-block;
-    width:49%;
+    width:46%;
 }
 .about_img01{
     position: absolute;
     top: -63px;
     left: 26px;
+    z-index: 2;
 }
 .about_img02{
     position: absolute;
@@ -181,6 +346,24 @@ h2{
     text-align: center;
     line-height: 45px;
     margin: 0 auto;
+    cursor : pointer;
+}
+.active_btn{
+  color:#fff !important;
+  background:#000 !important;
+  cursor : pointer;
+  width:110%;
+  transition-duration: 0.5s;
+  font-size: 23px !important;
+}
+.active_btn_online_store_btn{
+  color:#fff !important;
+  background:#000 !important;
+  border: 1px solid #fff;
+  cursor : pointer;
+  width:110%;
+  transition-duration: 0.5s;
+  font-size: 23px !important;
 }
 #product_area{
   position: relative;
@@ -188,20 +371,20 @@ h2{
 }
 .product_items{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     overflow: hidden;
 }
 .product_items div {
     z-index: 1;
+    overflow: hidden;
 }
 .product_bg{
     background: url(../img/product_bg.png) repeat-x center;
     animation: bgiLoop 10s linear infinite;
-    width: 1100px;
+    width: 100%;
     height: 260px;
     position: absolute;
     top: 192px;
-    left: -50px;
 }
 @keyframes bgiLoop {
     0% { background-position: 0 0;}
@@ -211,7 +394,8 @@ h2{
   margin:83px 0;
 }
 #access_area{
-    margin-top: 300px;
+    max-width: 1000px;
+    margin: 300px auto 0;
 }
 .shop_txt h3{
   font-size: 28px;
@@ -232,12 +416,15 @@ h2{
 }
 .shop_txt p{
   font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;    
+  margin-bottom: 20px;
 }
 #footer{
-  margin-top:225px
+  margin-top:225px;
+  height: 191px;
 }
 #footer .ft_sns div{
   display: inline-block;
+  margin: 0 10px;
 }
 #footer .ft_col{
   vertical-align: top;
@@ -278,6 +465,70 @@ h2{
   color: white;
 }*/
 
+/*ハンバーガーメニュー*/
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+    position: relative;
+    top: 12px;
+    left: 9px;
+    width: 28px;
+    height: 24px;
+}
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+    top: 12px;
+}
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+.menu-trigger.hm_active span:nth-of-type(1) {
+  -webkit-transform: translateY(12px) rotate(-45deg);
+  transform: translateY(12px) rotate(-45deg);
+}
+.menu-trigger.hm_active span:nth-of-type(2) {
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: active-menu-bar02 .8s forwards;
+  animation: active-menu-bar02 .8s forwards;
+}
+@-webkit-keyframes active-menu-bar02 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-menu-bar02 {
+  100% {
+    height: 0;
+  }
+}
+.menu-trigger.hm_active span:nth-of-type(3) {
+  -webkit-transform: translateY(-12px) rotate(45deg);
+  transform: translateY(-12px) rotate(45deg);
+}
+/*ハンバーガーメニュー*/
+
+.trim {
+    overflow: hidden;
+    width: 200px;/* トリミングしたい枠の幅 */
+    height: 200px;/* トリミングしたい枠の高さ */
+    position: relative;
+}
+
 .pc{
   display: block;
 }
@@ -289,8 +540,14 @@ h2{
 }
 .sidebar_sp_hidden_area{
   display: block;
+  transition-duration: 0.5s;
 }
-
+/*laptop版*/
+@media screen and (max-width:1366px){
+	.main_content_area {
+	    width: 72vw;
+	}
+}
 /*TB版*/
 @media screen and (max-width:1024px){
   .pc{
@@ -309,11 +566,11 @@ h2{
       position: absolute;
       right: 0;
       width: 100%;
-      max-width: 1000px;
+      /*max-width: 1000px;*/
   }
   #mv{
       position: relative;
-      height: 75vw;
+      height: 73vw;
   }
   #mv .mv_bg01 img{
       position: absolute;
@@ -321,6 +578,9 @@ h2{
       width: 7.5vw;
       z-index:1;  
   }
+  #mv .mv_bg02{
+      height: 39vw;/* トリミングしたい枠の高さ */
+  }  
   #mv .mv_bg02 img{
       position: absolute;
       width: 60vw;
@@ -330,9 +590,7 @@ h2{
       z-index: 1;
   }
   #mv .mv_bg03 img{
-    position: absolute;
-    right: -15px;
-    width: 104%;
+
   }  
   .product_bg{
       width: 100%;
@@ -350,7 +608,7 @@ h2{
   }  
   .sidebar_area{
     position: fixed;
-    width: 100%;
+    width: 22vw;
     height: 50px;
     overflow: hidden;
     background: #000;
@@ -364,7 +622,8 @@ h2{
     display: block;
   }
   .sidebar_sp_hidden_area{
-    display: none;
+    opacity: 0;
+    transition-duration: 0.5s;
   }  
   .sidebar_sp_visible_area div:nth-child(1){
     display: inline-block;
@@ -392,7 +651,8 @@ h2{
     width:92px;
   }  
   .sidebar_sp_hidden_area{
-    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.5s;
   }
   .main_content_area{  
     position: relative;
@@ -497,6 +757,10 @@ h2{
   .sp{
     display: block;
   }  
+  #loader img{
+    width: 155%;
+    transform: translate(44%, -20px);
+  }
   .container_inner{
     overflow: hidden;    
     width: 100%;
@@ -507,8 +771,9 @@ h2{
     width: 100%;
     height: 50px;
     overflow: hidden;
-    background: #000;
+    /*background: #000;*/
     z-index: 1;
+    transition-duration: 0.5s
   }    
   .sidebar_area{
     left:0;
@@ -518,16 +783,18 @@ h2{
     display: block;
   }
   .sidebar_sp_hidden_area{
-    display: none;
+    opacity: 0;
+    transition-duration: 0.5s;
   }  
   .sidebar_sp_visible_area div:nth-child(1){
+    vertical-align: top;
     display: inline-block;
     width: 44%;
     padding: 11px;
   }   
   .sidebar_sp_visible_area div:nth-child(2){
     display: inline-block;
-    width: 44%;
+    width: 40%;
     vertical-align: top;
     padding: 14px 8px;
     text-align: right;
@@ -546,7 +813,16 @@ h2{
     width:92px;
   }  
   .sidebar_sp_hidden_area{
-    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.5s;
+  }
+  .sidebar_area.hm_active{
+    height:100vh;
+    transition-duration: 0.5s
+  }
+  .sidebar_sp_hidden_area.hm_active{
+    opacity: 1;
+    transition-duration: 1s;
   }
   .main_content_area{  
     position: relative;
@@ -561,21 +837,25 @@ h2{
   #mv .mv_bg01 img{
     position: absolute;
     top: 15px;
-    left: -16px;
+    left: -57px;
     width: 65px;
     z-index: 1; 
+  }
+  #mv .mv_bg02 {
+      height: 150vw;  
   }
   #mv .mv_bg02 img{
     position: absolute;
     right: 0px;
     width: 68vw;
-    top: 141vw;
+    top: 507px;
     z-index: 1;
   }  
   #mv .mv_bg03 img{
-    position: absolute;
-    right: -14px;
-    width: 322px;
+    height: 140vw;
+  }  
+  .hfadeIn_sub01_trigger{
+    top:-550px;
   }  
   #banner_area {
     height: auto;
@@ -638,6 +918,9 @@ h2{
     margin: 0 -16px;
     width: 112%;
   }    
+  .flickity-viewport {
+      height: 300px !important;
+  }  
   .product_bg{
       display: none;
       width: 112%;
@@ -676,6 +959,7 @@ h2{
   #footer {
       margin-top: 125px;
       text-align: center;
+      height: 524px;
   }  
   #footer .ft_col{
     display: block;

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CERAMIC POWER GEAR（セラミックパワーギア） / FOR PROFESSIONALS</title>
+	<link rel="stylesheet" href="https://use.typekit.net/jsd1nvl.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://use.typekit.net/dnf0qsh.css">	
+	<link rel="stylesheet" href="https://use.typekit.net/rpd7crq.css">
+	<link rel="stylesheet" href="./css/destyle.css">
+	<link rel="stylesheet" href="./css/style.css?202007062154">
+	<link rel="stylesheet" href="./css/flickity.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div id="wrapper-bg"></div>
+		<video id="bg-video" src="video/03.mp4" preload="none" autoplay loop muted playsinline></video>
+
+		<!-- ローディングアニメーション -->
+		<div id="loader-bg">
+			<div id="loader">
+				<img src="./img/logo_white.svg" alt="Now Loading..." />
+			</div>
+		</div>
+
+		<div class="row container_inner">
+			<!-- 追従サイドバー -->
+			<div class="sidebar_area">
+				<!--SP版の時にこのヘッダーを表示-->
+				<div class="sidebar_sp_visible_area">
+
+					<div>
+						<img src="./img/sp/hd_logo.png" alt="">
+					</div>
+					<div>
+						<img src="./img/sp/hd_tel.png" alt="">
+					</div>
+					<div>
+						<a class="menu-trigger" href="#">
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						</a>
+					</div>
+				</div>
+				<!---->
+				<div class="sidebar_sp_hidden_area">
+					<ul class="dominoFade">
+						<li>
+							<div>
+								<img src="./img/side_logo.png" alt="">
+							</div>
+						</li>
+						<li>
+							<div>
+								<span>ABOUT</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span>PRODUCT</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span>NEWS</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span>ACCESS</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span>RAKUTEN STORE</span>
+							</div>
+						</li>
+						<li>
+							<div class="online_store_btn_box">
+								<span class="online_store_btn">ONLINE STORE</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span>CONTACT</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="./img/ft_tel.png" alt="">
+							</div>
+						</li>
+						<li>
+							<div class="side_col">
+								<div>
+									<img src="./img/ft_twitter.png" alt="">
+								</div>
+								<div>
+									<img src="./img/ft_instagram.png" alt="">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- メインコンテンツ -->
+			<div class="main_content_area">
+				<!-- メインビジュアル -->
+				<div id="mv">
+					<div class="mv_bg01">
+						<img src="./img/mv_vertical_logo.png" alt="" class="pc">
+						<img src="./img/sp/mv_vertical_logo.png" alt="" class="sp">
+					</div>
+					<div class="mv_bg02">
+						<img src="./img/mv_caption.png" alt="" class="pc">
+						<img src="./img/mv_caption.png" alt="" class="sp">
+					</div>
+					<div class="mv_bg03">
+						<div class="pc">
+							<ul class="bxslider">
+								<li class="zoom"><img src="./img/mv_01.jpg" alt=""></li>
+								<li class="zoom"><img src="./img/mv_02.jpg" alt=""></li>
+								<li class="zoom"><img src="./img/mv_03.jpg" alt=""></li>
+							</ul>
+						</div>
+						<div class="sp">
+							<ul class="bxslider">
+								<li class="zoom"><img src="./img/sp/mv_01.jpg" alt=""></li>
+								<li class="zoom"><img src="./img/sp/mv_02.jpg" alt=""></li>
+								<li class="zoom"><img src="./img/sp/mv_03.jpg" alt=""></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- BANNER -->
+				<div class="hfadeIn_sub01"><!--hfadeInを反映させる範囲（ボックス）の定義-->
+                	<div class="passing_box_sub01"></div><!--hfadeInが発火した時のエフェクトを定義-->		
+					<div id="banner_area">
+						<div class="banner_area_inner">
+							<img src="./img/middle_01.jpg" alt="" class="zoom_img">
+						</div>
+						<div class="banner_area_inner">
+							<div>
+								<img src="./img/middle_02.jpg" alt="" class="zoom_img">
+							</div>
+							<div>
+								<img src="./img/middle_03.jpg" alt="" class="zoom_img">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hfadeIn_sub01_trigger"></div><!--hfadeInの発火点をここで調整している-->
+				<!-- YOUTUBE -->
+				<div id="youtube_area" class="pc notab protab">
+					<div class="YT">
+						<iframe width="800" height="498" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="YTbg_wrapper">
+						<div class="YTbg"></div>
+					</div>
+				</div>
+				<!-- <div id="youtube_area" class="tab noprotab">
+					<div class="YT">
+						<iframe width="700" height="317" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="YTbg"></div>
+				</div> -->
+				<div id="youtube_area" class="sp">
+					<div class="YT">
+						<iframe width="330" height="186" src="https://www.youtube.com/embed/5tQZs38bzAM?controls=0&amp;start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>					
+					<div class="YTbg"></div>
+				</div>				
+				<!-- ABOUT -->
+				<div id="about_area">
+					<h2>ABOUT</h2>
+					<div class="hfadeIn">
+                		<div class="passing_box"></div>	
+						<div class="about_bg">
+							<img src="./img/about_bg.jpg" alt="" class="pc">
+							<img src="./img/sp/about_bg.jpg" alt="" class="sp">
+						</div>
+					</div>
+					<div>
+						<div class="about_img sp notab">
+							<div class="about_img01">
+								<img src="./img/sp/about_img01.png" alt="">
+							</div>
+							<div class="about_img02">
+								<img src="./img/sp/about_img02.png" alt="">
+							</div>
+						</div>						
+						<div class="about_txt">
+							<h3>想像を超えろ、本物を作り出せ</h3>
+							<p>「CERAMIC POWER GEAR」はコンプレッションギア部門、
+							スポーツネックレス部門、 コンフォートアパレル部門から成り、
+							各部門の開発にはそれぞれのスペシャリストが集結。<br>
+							叡智を集め、最上の素材と匠の業によって形作られる
+							至極のアイテムを開発しています。</p>
+							<div class="view_more_btn">VIEW MORE ></div>				
+						</div>
+						<div class="about_img">
+							<div class="pc tab">
+								<div class="about_img01">
+									<img src="./img/about_img01.png" alt="">
+								</div>
+								<div class="about_img02">
+									<img src="./img/about_img02.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PRODUCT -->
+				<div id="product_area">
+					<div>
+						<h2>PRODUCT</h2>
+					</div>
+					<div class="hfadeIn">
+                		<div class="passing_box"></div>
+						<div class="pc tab">
+							<div class="product_items">
+								<div>
+									<img src="./img/product_01.png" alt="" class="zoom_img">
+								</div>
+								<div>
+									<img src="./img/product_02.png" alt="" class="zoom_img">
+								</div>
+								<div>
+									<img src="./img/product_03.png" alt="" class="zoom_img">
+								</div>
+							</div>
+						</div>
+						<div class="sp notab">
+							<div class="product_flickity">
+								<div class="gallery-cell"><img src="./img/sp/product_01.png" alt=""></div>
+								<div class="gallery-cell"><img src="./img/sp/product_01.png" alt=""></div>
+								<div class="gallery-cell"><img src="./img/sp/product_01.png" alt=""></div>
+							</div>
+						</div>		
+						<div class="product_bg">
+						</div>					
+						<div>
+							<div class="product_btn_area">
+								<div class="view_more_btn">VIEW MORE ></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ACCESS -->
+				<div id="access_area">
+					<div>
+						<h2>ACEESS</h2>
+					</div>
+					<div>
+						<div class="hfadeIn">
+	                		<div class="passing_box"></div>							
+							<div class="shop_image">
+								<img src="./img/shop_image.jpg" alt="">
+							</div>
+							<div class="shop_txt">
+								<h3>Yokohama Shop</h3>
+								<hr>
+								<p>神奈川県横浜市中区住吉町1-12-5 1階<br>
+									1F 1-12-5 Sumiyoshicho, Naka-ku, Yokohama, Kanagawa<br>
+									<br>
+									Tel : 045-228-7898<br>
+									Open : 11:00　Close : 20:00
+								</p>
+								<div class="view_more_btn">GOOGLE MAP ></div>		
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- フッター -->
+				<div id="footer">
+					<div class="ft_col">
+						<div class="pc notab">
+							<ul class="ft_dominoFade">
+								<li>
+									<img src="./img/ft_logo.png" alt="" style="margin-top: -19px;">
+								</li>
+								<li>
+									<img src="./img/ft_tel.png" alt="">
+								</li>
+								<li class="ft_sns">
+									<div>
+										<img src="./img/ft_twitter.png" alt="">
+									</div>
+									<div>
+										<img src="./img/ft_instagram.png" alt="">
+									</div>
+								</li>
+							</ul>						
+						</div>
+					</div>
+					<div class="ft_col">
+						<ul class="ft_dominoFade">
+							<li>ABOUT</li>
+							<li>PRODUCTS</li>
+							<li>NEWS</li>
+							<li>ACCESS</li>
+						</ul>
+					</div>
+					<div class="ft_col">
+						<ul class="ft_dominoFade">
+							<li>RAKUTEN STORE</li>
+							<li>ONLINE STORE</li>
+							<li>CONTACT</li>
+						</ul>
+					</div>
+					<div class="sp tab">
+						<ul class="ft_dominoFade">
+							<li>
+								<img src="./img/ft_tel.png" alt="">
+							</li>
+							<li class="ft_sns">
+								<div>
+									<img src="./img/ft_twitter.png" alt="">
+								</div>
+								<div>
+									<img src="./img/ft_instagram.png" alt="">
+								</div>
+							</li>
+							<li class="ft_logo">
+								<img src="./img/ft_logo.png" alt=""">
+							</li>							
+						</ul>						
+					</div>										
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--bxslider START-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.bxslider.js"></script>
+	<script>
+	$(function(){
+		 $('.bxslider').bxSlider({
+			pager:true,
+			auto: true,
+			controls: false,
+			// mode:'fade',
+			speed:500,
+			pause:4000,
+			infiniteLoop:true,
+			onSlideBefore: function($slideElement){
+              $slideElement.removeClass('active-zoom');
+            }, 
+            onSlideAfter: function($slideElement){
+              $slideElement.addClass('active-zoom');
+            }		
+		});
+	});
+	</script>
+	<!--bxslider END-->
+	<script type="text/javascript" src="./js/jquery.inview.min.js"></script>
+	<script type="text/javascript" src="./js/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
